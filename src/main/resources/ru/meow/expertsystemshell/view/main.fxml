@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="menuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Открыть" />
+                  <MenuItem mnemonicParsing="false" text="Сохранить" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Консультация">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Начать консультацию" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane prefHeight="395.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Управление переменными">
+            <content>
+              <AnchorPane fx:id="variableManagementAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="31.0" layoutY="55.0" text="Переменные">
+                           <content>
+                              <ListView fx:id="variableListView" prefHeight="200.0" prefWidth="157.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="222.0" layoutY="56.0" text="Значения">
+                           <content>
+                              <ListView fx:id="variableValueListView" prefHeight="200.0" prefWidth="156.0" />
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="addVariableButton" layoutX="426.0" layoutY="55.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" text="Добавить переменную" />
+                        <Button fx:id="editVariableButton" layoutX="426.0" layoutY="99.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" text="Изменить переменную" />
+                        <Button fx:id="removeVariableButton" layoutX="426.0" layoutY="142.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" text="Удалить переменную" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Управление правилами">
+            <content>
+              <AnchorPane fx:id="ruleManagementAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="30.0" layoutY="26.0" text="Правила">
+                           <content>
+                              <ListView fx:id="ruleListView" prefHeight="239.0" prefWidth="340.0" />
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="addRuleButton" layoutX="417.0" layoutY="26.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Добавить правило" />
+                        <Button fx:id="editRuleButton" layoutX="417.0" layoutY="75.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Изменить правило" />
+                        <Button fx:id="removeRuleButton" layoutX="417.0" layoutY="126.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Удалить правило" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
